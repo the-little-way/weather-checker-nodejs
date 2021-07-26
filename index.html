@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="The Weather">
+	<style>
+	body {
+	background-color: whitesmoke;
+	}
+	
+	h1 {
+	text-align: center;
+	text-transform: capitalize;
+	}
+	
+	section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	}
+	
+	.card {
+	background-color: black;
+	border: grey 1px solid;
+	border-radius: 8px 8px 0px 0px;
+	box-shadow: 0px 2px 5px 0 rgba(33, 49, 60, 0.79);
+	display:flex;
+	color: white:
+	font-family: sans-serif;
+	flex-direction: column;
+	margin: 10px;
+	text-align: center;
+	transition: 0.5s all ease;
+	overflow: hidden;
+	width: 200px;
+	}
+	
+	.card:hover {
+	box-shadow: none;
+	width: 270px;
+	}
+	
+	.card p {
+	color: white;
+	}
+	
+	.card a {
+	color: #ff2c12;
+	text-decoration: none;
+	}
+	
+	.card a:hover {
+	filter: brightness(0.8);
+	}
+	
+	img {
+	height: 150px;
+	}
+	
+	input[type=text] {
+	border: grey 1px solid;
+	padding: 4px 12px;
+	}
+	button[type=submit] {
+	background-color: #08f;
+	border-radius: 4px;
+	border: none;
+	color: white;
+	padding: 4px 12px;
+	}
+	
+	button[type=submit]:hover {
+	filter: brightness(0.8);
+	}
+	
+	.searchForm {
+	display: block;
+	clear: both;
+	width: 100%;
+	text-align: center;
+	}
+	</style>
+</head>
+
+<body>
+	<h1>This web app shows the <span style="color:red">live</span> weather</h1>
+	<section>
+		<div class="card">
+			<img src="images/accra.jpg"/>
+			<p>...in Accra <a href="/accra">Click here</a></p>
+		</div>
+		<div class="card">
+			<img src="images/berlin.jpg"/>
+			<p>...in Berlin <a href="/berlin">Click here</a></p>
+		</div>
+		<div class="card">
+			<img src="images/cairo.jpg"/>
+			<p>...in Cairo <a href="/cairo">Click here</a></p>
+		</div>
+		<form class="searchForm" action="/" method="post">
+		<h3>Want to view the weather for a different city?</h3>
+			<label for="cityInput">City name: 
+			<input id="cityInput" name="cityName" type="text" />
+			</label>
+			<button type="submit">Search</button>
+		</form>
+	</section>
+</body>
+
+</html>
